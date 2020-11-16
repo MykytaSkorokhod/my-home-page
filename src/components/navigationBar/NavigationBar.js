@@ -124,13 +124,8 @@ const NavigationBar = props => {
               <IconButton
                 className={classes.sideIcon}
                 target="_blank" rel="noopener noreferrer"
-                color="inherit">
-                <TwitterIcon />
-              </IconButton>
-              <IconButton
-                className={classes.sideIcon}
-                target="_blank" rel="noopener noreferrer"
-                color="inherit">
+                color="inherit"
+                href="https://www.linkedin.com/in/mykyta-skorokhod-b2004b1a7">
                 <LinkedInIcon />
               </IconButton>
             </div>
