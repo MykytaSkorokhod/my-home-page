@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-import avatar from '../../assets/avatar.png';
 
 const useStyles = makeStyles((theme) => ({
   about: {
@@ -26,7 +25,7 @@ const SideAboutMe = props => {
 
   return (
     <div className={classes.about}>
-      <img className={classes.avatar} src={ avatar } alt="" />
+      <img className={classes.avatar} src="avatar.png" alt="" />
       <Typography className={classes.text}>
         Hi! My name Mykyta(Nikita) Skorokhod. I am C# developer on .NET ecosystem.
       </Typography>
