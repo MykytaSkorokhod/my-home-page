@@ -25,9 +25,9 @@ const SideAboutMe = props => {
 
   return (
     <div className={classes.about}>
-      <img className={classes.avatar} src="avatar.png" alt="" />
+      <img className={classes.avatar} src="media/avatar.png" alt="" />
       <Typography className={classes.text}>
-        Hi! My name Mykyta(Nikita) Skorokhod. I am C# developer on .NET ecosystem.
+        Hi! My name Mykyta(Nikita) Skorokhod. I am Full Stack developer on .NET ecosystem.
       </Typography>
     </div>
   );
