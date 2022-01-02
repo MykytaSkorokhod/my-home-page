@@ -48,7 +48,6 @@ const SkillCard = props => {
     skillImagePath,
     skillDescription,
     skillText,
-    skillExperience,
   } = props;
 
   const classes = useStyles();
