@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     width: 280,
-    height: 280,
+    height: "auto",
     margin: "auto",
   },
   expand: {
@@ -58,9 +58,11 @@ const SkillCard = props => {
   };
 
   return (
-    <Card className={classes.root}>
+    <Card 
+      className={classes.root}
+      onClick={handleExpandClick}>
       <div className={classes.title}>
-        <Typography variant="h2">
+        <Typography variant="h3">
           {skillName}
         </Typography>
         <Typography variant="subtitle1" color="textSecondary">
@@ -71,6 +73,7 @@ const SkillCard = props => {
         component="img"
         className={classes.media}
         src={skillImagePath}
+        
         title={skillName}
         alt={skillName}
       />
@@ -84,7 +87,6 @@ const SkillCard = props => {
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
           })}
-          onClick={handleExpandClick}
           aria-expanded={expanded}
           aria-label="show more"
         >
