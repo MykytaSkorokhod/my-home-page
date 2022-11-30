@@ -17,7 +17,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Popover from '@mui/material/Popover';
 import { goHome, goBlog, goStack, goProjects } from '../../actions/navigations';
 import { connect } from 'react-redux';
 import { navigationTabs } from '../../constants';
@@ -96,18 +95,6 @@ const NavigationBar = props => {
     }
   };
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handlePopoverOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handlePopoverClose = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
-
   return (
     <div>
       <HideOnScroll {...props}>
@@ -126,43 +113,20 @@ const NavigationBar = props => {
               <Tab disableRipple={true} label="Projects" icon={<AppsIcon />} />
             </Tabs>
             <div className={classes.sideButtons}>
-              <div>
-                <IconButton
-                  className={classes.sideIcon}
-                  target="_blank" rel="noopener noreferrer"
-                  color="inherit"
-                  href="https://github.com/MykytaSkorokhod">
-                  <GitHubIcon />
-                </IconButton>
-              </div>
-              <div>
-                <IconButton
-                  className={classes.sideIcon}
-                  target="_blank" rel="noopener noreferrer"
-                  color="inherit"
-                  href="https://www.linkedin.com/in/mykyta-skorokhod-b2004b1a7">
-                  <LinkedInIcon />
-                </IconButton>
-                <Popover
-                  id="mouse-over-popover"
-                  sx={{
-                    pointerEvents: 'none',
-                  }}
-                  open={open}
-                  anchorEl={anchorEl}
-                  anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left',
-                  }}
-                  transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'left',
-                  }}
-                  onClose={handlePopoverClose}
-                  disableRestoreFocus>
-                  <Typography sx={{ p: 1 }}>Link to my LinkedId page</Typography>
-                </Popover>
-              </div>
+              <IconButton
+                className={classes.sideIcon}
+                target="_blank" rel="noopener noreferrer"
+                color="inherit"
+                href="https://github.com/MykytaSkorokhod">
+                <GitHubIcon />
+              </IconButton>
+              <IconButton
+                className={classes.sideIcon}
+                target="_blank" rel="noopener noreferrer"
+                color="inherit"
+                href="https://www.linkedin.com/in/mykyta-skorokhod-b2004b1a7">
+                <LinkedInIcon />
+              </IconButton>
             </div>
           </Toolbar>
         </AppBar>
